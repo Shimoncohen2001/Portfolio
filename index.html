@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Shimon Cohen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Bootstrap Icons (pour les icônes LinkedIn, WhatsApp, etc.) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#">
+                Shimon<span>Cohen</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#qualifications">Qualifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO / INTRO -->
+        <section id="hero" class="hero section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Texte -->
+                    <div class="col-lg-7">
+                        <div class="badge-speciality">
+                            <i class="bi bi-code-slash"></i>
+                            Software Engineer
+                        </div>
+
+                        <h1>Hello, I'm Shimon.</h1>
+                        <p class="subtitle">
+                            Je me spécialise dans le développement web (HTML, CSS, JavaScript, Node.js)
+                            et je construis des projets concrets, propres et maintenables.
+                        </p>
+
+                        <p class="mb-4">
+                            Ce portfolio présente les projets que j’ai réalisés, mes compétences,
+                            ainsi que mon parcours académique.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="bi bi-folder2-open me-1"></i> Voir mes projets
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light">
+                                <i class="bi bi-send me-1"></i> Me contacter
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stats / compteur -->
+                    <div class="col-lg-5">
+                        <div class="stats-box mb-3">
+                            <div class="stats-label mb-1">Lignes de code écrites</div>
+                            <div id="loc-counter" class="stats-value" data-target="45213">0</div>
+                            <div class="text-secondary mt-1" style="font-size: 0.85rem;">
+                                Estimation basée sur mes principaux projets réalisés à ce jour.
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="stats-box">
+                                    <div class="stats-label mb-1">Projets</div>
+                                    <div class="stats-value" style="font-size: 1.8rem;">8</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stats-box">
+                                    <div class="stats-label mb-1">Technos</div>
+                                    <div class="stats-value" style="font-size: 1.8rem;">+10</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALIFICATIONS / DIPLÔMES -->
+        <section id="qualifications" class="section">
+            <div class="container">
+                <h2 class="section-title">Qualifications & diplômes</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="qualification-card">
+                            <h3>Licence en Informatique</h3>
+                            <div class="qualification-meta">Université / École – 2020–2023</div>
+                            <p class="mt-2 mb-0">
+                                Parcours axé sur les bases de l’informatique, algorithmes, structures de données,
+                                programmation et systèmes.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="qualification-card">
+                            <h3>Formation Fullstack</h3>
+                            <div class="qualification-meta">HackerU – 2024–2025</div>
+                            <p class="mt-2 mb-0">
+                                Développement web complet : frontend moderne, backend Node.js, bases de données,
+                                bonnes pratiques et méthodologies.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="qualification-card">
+                            <h3>Autres certifications</h3>
+                            <div class="qualification-meta">Online / autodidacte</div>
+                            <p class="mt-2 mb-0">
+                                Cours en ligne, projets personnels, participation à des challenges
+                                pour approfondir mes compétences techniques.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Mes projets</h2>
+                <p class="text-secondary mb-4">
+                    Voici quelques projets représentatifs. Chaque card peut renvoyer vers un repo GitHub ou une démo.
+                </p>
+
+                <div class="row g-4">
+                    <!-- Projet 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <div class="project-thumb">
+                                Aperçu / capture du projet
+                            </div>
+                            <div class="project-body">
+                                <h3 class="h5 mb-1">Projet Portfolio</h3>
+                                <p class="mb-2 text-secondary">
+                                    Site portfolio responsive en HTML, CSS et Bootstrap, avec mode sombre et animation.
+                                </p>
+                                <div class="project-tags mb-2">
+                                    <span class="badge me-1">HTML</span>
+                                    <span class="badge me-1">CSS</span>
+                                    <span class="badge me-1">Bootstrap</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="#" class="link-light text-decoration-none">
+                                        Voir le projet <i class="bi bi-arrow-up-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <div class="project-thumb">
+                                API / backend Node.js
+                            </div>
+                            <div class="project-body">
+                                <h3 class="h5 mb-1">API Node.js</h3>
+                                <p class="mb-2 text-secondary">
+                                    Backend REST avec Node.js, Express et MongoDB pour gérer des ressources.
+                                </p>
+                                <div class="project-tags mb-2">
+                                    <span class="badge me-1">Node.js</span>
+                                    <span class="badge me-1">Express</span>
+                                    <span class="badge me-1">MongoDB</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="#" class="link-light text-decoration-none">
+                                        Voir le projet <i class="bi bi-arrow-up-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <div class="project-thumb">
+                                Application front moderne
+                            </div>
+                            <div class="project-body">
+                                <h3 class="h5 mb-1">App Frontend</h3>
+                                <p class="mb-2 text-secondary">
+                                    Interface utilisateur dynamique avec JavaScript ou framework frontend.
+                                </p>
+                                <div class="project-tags mb-2">
+                                    <span class="badge me-1">JavaScript</span>
+                                    <span class="badge me-1">API</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="#" class="link-light text-decoration-none">
+                                        Voir le projet <i class="bi bi-arrow-up-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Me contacter</h2>
+                <p class="text-secondary mb-4">
+                    Tu veux me parler d’un projet, d’une collaboration ou d’une opportunité ? Voici les moyens de me
+                    joindre.
+                </p>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-card">
+                            <h3 class="h5 mb-3">Réseaux & messagerie</h3>
+
+                            <a href="https://www.linkedin.com" target="_blank" class="contact-link">
+                                <i class="bi bi-linkedin"></i>
+                                <span>
+                                    LinkedIn
+                                    <small>Profil professionnel, expériences, projets.</small>
+                                </span>
+                            </a>
+
+                            <a href="https://wa.me/0000000000" target="_blank" class="contact-link">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>
+                                    WhatsApp
+                                    <small>Messages rapides, échanges informels.</small>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-card">
+                            <h3 class="h5 mb-3">Email & téléphone</h3>
+
+                            <a href="mailto:tonmail@example.com" class="contact-link">
+                                <i class="bi bi-envelope"></i>
+                                <span>
+                                    Email
+                                    <small>tonmail@example.com</small>
+                                </span>
+                            </a>
+
+                            <a href="tel:+330000000" class="contact-link">
+                                <i class="bi bi-telephone"></i>
+                                <span>
+                                    Téléphone
+                                    <small>+33 0 00 00 00 00</small>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-4">
+                        <div class="contact-card">
+                            <h3 class="h5 mb-3">Formulaire (optionnel)</h3>
+                            <form>
+                                <div class="mb-2">
+                                    <label class="form-label">Nom</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Ton nom">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control form-control-sm" placeholder="Ton email">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control form-control-sm" rows="3"
+                                        placeholder="Ton message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm w-100">
+                                    Envoyer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <span>© 2025 Shimon Cohen</span>
+            <span>Développé avec HTML, CSS & Bootstrap</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
