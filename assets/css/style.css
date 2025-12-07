@@ -57,7 +57,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.8s ease;
 }
+
+.profile-pic:hover{
+    transform:rotate(360deg);
+   
+}
+
     .badge-speciality {
       background: rgba(59, 130, 246, 0.15);
       border: 1px solid #3b82f6;
@@ -165,7 +172,7 @@
       color: #e5e7eb;
       font-weight: 400;
     }
-
+   
     /* Contact */
     .contact-card {
       background: #020617;
@@ -206,3 +213,8 @@
       color: #9ca3af;
       background: #020617;
     }
+
+    /* Permet aux cards de dépasser du carousel au hover */
+#projectsCarousel .carousel-inner {
+  overflow: visible;
+}
