@@ -174,12 +174,7 @@
       font-weight: 400;
     }
    /* arrows of the carroussel */
-   .carousel-control-prev{
-    left: -120px;
-   }
-   .carousel-control-next{
-    right: -120px;
-   }
+  
     /* Contact */
     .contact-card {
       background: #020617;
@@ -224,4 +219,49 @@
     /* Permet aux cards de dépasser du carousel au hover */
 #projectsCarousel .carousel-inner {
   overflow: visible;
+}
+/* --- Placer les flèches du carousel EN BAS --- */
+
+/* On réserve un espace sous le carousel */
+#projectsCarousel {
+  padding-bottom: 3rem;   /* important */
+  position: relative;     /* indispensable */
+}
+
+/* Positionner les flèches en bas */
+#projectsCarousel .carousel-control-prev,
+#projectsCarousel .carousel-control-next {
+  bottom: 0;          /* en bas */
+  top: auto;          /* on annule le top */
+  width: auto;
+  height: auto;
+}
+
+/* Flèche gauche → centrée vers la gauche */
+#projectsCarousel .carousel-control-prev {
+  left: 50%;
+  transform: translateX(-3rem);
+}
+
+/* Flèche droite → centrée vers la droite */
+#projectsCarousel .carousel-control-next {
+  right: 50%;
+  transform: translateX(3rem);
+}
+
+/* Icônes plus compactes (optionnel) */
+#projectsCarousel .carousel-control-prev-icon,
+#projectsCarousel .carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Version mobile : rapprocher les flèches */
+@media (max-width: 576px) {
+  #projectsCarousel .carousel-control-prev {
+    transform: translateX(-2rem);
+  }
+  #projectsCarousel .carousel-control-next {
+    transform: translateX(2rem);
+  }
 }
