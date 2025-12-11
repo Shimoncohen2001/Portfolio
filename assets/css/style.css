@@ -62,7 +62,7 @@
 
 .profile-pic:hover{
     transform:rotate(360deg);
-   
+    scale: 1.5;
 }
 
     .badge-speciality {
