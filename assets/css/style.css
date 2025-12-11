@@ -113,6 +113,7 @@
       }
     }
         /* Qualifications */
+
     .qualification-card {
       background: #020617;
       border-radius: 1rem;
@@ -172,7 +173,13 @@
       color: #e5e7eb;
       font-weight: 400;
     }
-   
+   /* arrows of the carroussel */
+   .carousel-control-prev{
+    left: -120px;
+   }
+   .carousel-control-next{
+    right: -120px;
+   }
     /* Contact */
     .contact-card {
       background: #020617;

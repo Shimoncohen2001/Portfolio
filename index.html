@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-   <link rel="icon" type="image/png" href="./icon/logo_Portfolio.png">
+    <link rel="icon" type="image/png" href="./icon/logo_Portfolio.png">
 
     <title>Portfolio | Shimon Cohen</title>
 
@@ -14,6 +14,27 @@
     <!-- Bootstrap Icons (pour les icônes LinkedIn, WhatsApp, etc.) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById("loc-counter");
+        const target = +counter.getAttribute("data-target"); // valeur finale
+        const speed = 200; // plus c'est bas, plus c'est rapide
+
+        function updateCounter() {
+            const current = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+
+            if (current < target) {
+                counter.innerText = current + increment;
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target;
+            }
+        }
+
+        updateCounter();
+    });
+</script>
 
 <body>
 
@@ -31,7 +52,6 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#qualifications">Qualifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -80,7 +100,7 @@
                     <div class="col-lg-5">
                         <div class="stats-box mb-3">
                             <div class="stats-label mb-1">Lines of code written</div>
-                            <div id="loc-counter" class="stats-value">+36,765</div>
+                            <div id="loc-counter" class="stats-value" data-target="45213">0</div>
                             <div class="text-secondary mt-1" style="font-size: 0.85rem;">
                                 Estimate based on my main projects completed to date. </div>
                         </div>
@@ -106,7 +126,7 @@
         </section>
 
         <!-- QUALIFICATIONS / DIPLÔMES -->
-        <section id="qualifications" class="section">
+        <section id="About" class="section">
             <div class="container">
                 <h2 class="section-title">Education & Qualifications</h2>
 
@@ -193,18 +213,21 @@
                                 <!-- Projet 2 -->
                                 <div class="col-md-6 col-lg-4">
                                     <article class="project-card">
-                                        <div class="project-thumb">API / backend Node.js</div>
+                                        <div class="project-thumb">Watch Store – Multi-Layer C# Application</div>
                                         <div class="project-body">
-                                            <h3 class="h5 mb-1">API Node.js</h3>
+                                            <h3 class="h5 mb-1">Watch Store</h3>
                                             <p class="mb-2 text-secondary">
-                                                RESTful backend implemented using Node.js, Express, and MongoDB for
-                                                resource
-                                                management.
+                                                A complete watch-shop system using DAL/BL/PL architecture with full CRUD
+                                                operations, business logic, and WPF UI. Includes XML persistence and an
+                                                automatic order-status simulator.
                                             </p>
                                             <div class="project-tags mb-2">
-                                                <span class="badge me-1">Node.js</span>
-                                                <span class="badge me-1">Express</span>
-                                                <span class="badge me-1">MongoDB</span>
+                                                <span class="badge me-1">C#</span>
+                                                <span class="badge me-1">WPF</span>
+                                                <span class="badge me-1">OOP</span>
+                                                <span class="badge me-1">Multi-Layer Architecture</span>
+                                                <span class="badge me-1">XML</span>
+                                                <span class="badge me-1">Design Patterns</span>
                                             </div>
                                             <div class="mt-auto">
                                                 <a href="#" class="link-light text-decoration-none">
@@ -218,16 +241,20 @@
                                 <!-- Projet 3 -->
                                 <div class="col-md-6 col-lg-4">
                                     <article class="project-card">
-                                        <div class="project-thumb">Modern frontend application</div>
+                                        <div class="project-thumb">Ray Tracing Engine(Java)</div>
                                         <div class="project-body">
-                                            <h3 class="h5 mb-1">App Frontend</h3>
+                                            <h3 class="h5 mb-1">Ray Tracing</h3>
                                             <p class="mb-2 text-secondary">
-                                                Dynamic and responsive UI implemented with JavaScript and frontend
-                                                frameworks.
+                                                A Java-based ray tracing prototype featuring geometric modeling, camera
+                                                rendering, lighting, shadows, reflections, and refractions. Built
+                                                step-by-step with unit tests and the Phong illumination model.
                                             </p>
                                             <div class="project-tags mb-2">
-                                                <span class="badge me-1">JavaScript</span>
-                                                <span class="badge me-1">API</span>
+                                                <span class="badge me-1">Java</span>
+                                                <span class="badge me-1">OOP</span>
+                                                <span class="badge me-1">Ray Tracing</span>
+                                                <span class="badge me-1">Math & Geometry</span>
+                                                <span class="badge me-1">Unit Testing</span>
                                             </div>
                                             <div class="mt-auto">
                                                 <a href="#" class="link-light text-decoration-none">
@@ -244,48 +271,91 @@
                         <!-- SLIDE 2 (exemple pour d'autres projets) -->
                         <div class="carousel-item">
                             <div class="row g-4">
-
+                                <!-- Projetc 4 -->
                                 <div class="col-md-6 col-lg-4">
                                     <article class="project-card">
-                                        <div class="project-thumb">New Project</div>
+                                        <div class="project-thumb">Database Management System (Basketball League)</div>
                                         <div class="project-body">
-                                            <h3 class="h5 mb-1">Project 4</h3>
-                                            <p class="mb-2 text-secondary">Short description of another project.</p>
+                                            <h3 class="h5 mb-1">Basketball League Database System</h3>
+                                            <p class="mb-2 text-secondary">
+                                                A full SQL database system built for managing a basketball league,
+                                                including players, positions, injuries, drafts, views, procedures, and
+                                                functions. Features advanced queries, performance optimization with
+                                                indexes, and visual analytics.
+                                            </p>
                                             <div class="project-tags mb-2">
-                                                <span class="badge me-1">Tech</span>
+                                                <span class="badge me-1">SQL</span>
+                                                <span class="badge me-1">PL/SQL</span>
+                                                <span class="badge me-1">Data Modeling</span>
+                                                <span class="badge me-1">ERD & DSD</span>
+                                                <span class="badge me-1">Indexes</span>
+                                                <span class="badge me-1">Views</span>
+                                                <span class="badge me-1">Stored Procedures</span>
+                                                <span class="badge me-1">Functions</span>
                                             </div>
-                                            <a href="#" class="link-light text-decoration-none">view the project</a>
+                                            <div class="mt-auto">
+                                                <a href="#" class="link-light text-decoration-none">
+                                                    view the project <i class="bi bi-arrow-up-right ms-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- Projetct 5 -->
+                                <div class="col-md-6 col-lg-4">
+                                    <article class="project-card">
+                                        <div class="project-thumb">Weapon Management System (Server + Graphics)</div>
+                                        <div class="project-body">
+                                            <h3 class="h5 mb-1">Weapon Management System – C# Server & Python Client
+                                            </h3>
+                                            <p class="mb-2 text-secondary">
+                                                A full weapon-management system featuring a C# ASP.NET 6 REST API, an
+                                                image-recognition module using Imagga, and ChatGPT/OpenAI integration.
+                                                Includes a Python MVP graphical client that communicates with the server
+                                                over REST.
+                                            </p>
+                                            <div class="project-tags mb-2">
+                                                <span class="badge me-1">C#</span>
+                                                <span class="badge me-1">ASP.NET 6</span>
+                                                <span class="badge me-1">REST API</span>
+                                                <span class="badge me-1">SQL</span>
+                                                <span class="badge me-1">Python</span>
+                                                <span class="badge me-1">MVP Architecture</span>
+                                                <span class="badge me-1">Imagga API</span>
+                                                <span class="badge me-1">OpenAI API</span>
+                                            </div>
+                                            <div class="mt-auto">
+                                                <a href="#" class="link-light text-decoration-none">
+                                                    view the project <i class="bi bi-arrow-up-right ms-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- project 6 -->
+                                <div class="col-md-6 col-lg-4">
+                                    <article class="project-card">
+                                        <div class="project-thumb">Nand2Tetris Compiler (Pascal)</div>
+                                        <div class="project-body">
+                                            <h3 class="h5 mb-1">Jack-to-VM Compiler</h3>
+                                            <p class="mb-2 text-secondary">
+                                                Complete compiler written in Pascal for the Nand2Tetris project, including the tokenizer, parser, symbol table, and VM writer. Demonstrates deep understanding of compiler internals, grammar processing, and VM code generation.
+                                            </p>
+                                            <div class="project-tags mb-2">
+                                                <span class="badge me-1">Pascal</span>
+                                                <span class="badge me-1">Compiler Design</span>
+                                                <span class="badge me-1">VM</span>
+                                                <span class="badge me-1">Algorithms</span>
+                                            </div>
+                                            <div class="mt-auto">
+                                                <a href="#" class="link-light text-decoration-none">
+                                                    view the project <i class="bi bi-arrow-up-right ms-1"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </article>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4">
-                                    <article class="project-card">
-                                        <div class="project-thumb">Another Project</div>
-                                        <div class="project-body">
-                                            <h3 class="h5 mb-1">Project 5</h3>
-                                            <p class="mb-2 text-secondary">Short description of another project.</p>
-                                            <div class="project-tags mb-2">
-                                                <span class="badge me-1">Tech</span>
-                                            </div>
-                                            <a href="#" class="link-light text-decoration-none">view the project</a>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="col-md-6 col-lg-4">
-                                    <article class="project-card">
-                                        <div class="project-thumb">Project</div>
-                                        <div class="project-body">
-                                            <h3 class="h5 mb-1">Project 6</h3>
-                                            <p class="mb-2 text-secondary">Short description of another project.</p>
-                                            <div class="project-tags mb-2">
-                                                <span class="badge me-1">Tech</span>
-                                            </div>
-                                            <a href="#" class="link-light text-decoration-none">view the project</a>
-                                        </div>
-                                    </article>
-                                </div>
 
                             </div>
                         </div>
